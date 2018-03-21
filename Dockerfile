@@ -1,8 +1,8 @@
 FROM golang:1.9-alpine
 
-RUN go get -v -u github.com/stripe/stripe-mock
+RUN apk add --update --no-cache git
 
-RUN go install github.com/stripe/stripe-mock
+RUN go get -v -u github.com/stripe/stripe-mock
 
 EXPOSE 12111
 
